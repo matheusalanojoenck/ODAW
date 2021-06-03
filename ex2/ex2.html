@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        Lista de definição
+        <dl>
+            <dt>1. Titulo</dt>
+            <dd>1.1. Titulo </dd>
+            <dd><li>&lt;dd&gt; e &lt;li&gt; aninhados</li></dd>
+        </dl>
+        
+        <hr>
+
+        Lista não definida
+        <ul>
+            <li type="square">Item 1</li>
+            <li type="circle">Item 2</li>
+            <li> Item 3</li>
+        </ul>
+
+        <hr>
+
+        Lista ordenada
+        <ol start=1 reversed type="1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+
+        <hr>
+
+        <table border="1" cellpadding="5">
+            <tr>
+                <td>rowspan/colspan</td><th colspan="3">colspan</th>
+            </tr>
+            <tr>
+                <th rowspan="4" valign="top">rowspan</th>
+            </tr>
+            <tr>
+                <td>linha 1; coluna 1</td><td>linha 1; coluna 2</td><td>linha 1 coluna n</td>
+            </tr>
+            <tr>
+                <td>linha 2; coluna 1</td><td>linha 2; coluna 2</td><td>linha 2 coluna n</td>
+            </tr>
+            <tr>
+                <td>linha n; coluna 1</td><td>linha n; coluna 2</td><td>linha n coluna n</td>
+            </tr>
+            
+        </table>
+
+        <hr>
+
+        <form>
+            <label for="login">Login:</label> <input type="text" name="user" size="7"><br>
+            <label for="senha">Senha:</label> <input type="password" name="senha" size="7"><br>
+            <input type="submit" value="Entrar"><br>
+        </form>
+            <hr>
+        <form>
+            Deixe aqui sua sugestão<br>
+            <textarea name="sugestao"></textarea><br>
+            <input type="submit" value="Enviar"><br>
+        </form>
+
+    <hr>
+    <form>
+        <label for="itens">Escolha um item</label>
+        <select>
+            <option>Item 1</option>
+            <option>Item 2</option>
+            <option>Item 3</option>
+        </select>
+    </form>
+    <hr>
+    <form>
+        <label for="itens">Escolha um item</label>
+        <select multiple>
+            <option>Item 1</option>
+            <option>Item 2</option>
+            <option>Item 3</option>
+        </select>
+    </form>
+    <hr>
+    <form>
+        <input type="checkbox" name="item" value="Item 1" checked>Item 1<br> 
+        <input type="checkbox" name="item" value="Item 2">Item 2<br>
+        <input type="reset">
+    </form>
+    <hr>
+    <form>
+        <input type="radio" name="item" value="Item 1" checked>Item 1<br>
+        <input type="radio" name="item" value="Item 2">Item 2<br>
+    </form>
+        
+    </body>
+</html>
