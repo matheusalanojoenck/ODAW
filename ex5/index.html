@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - ODAW</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <h3>
+        Tabela com N^2, N^3, e !N com N entre [0, 10]
+    </h3>
+    <table>
+        <tr>
+            <th>N</th>
+            <th>N^2</th>
+            <th>N^3</th>
+            <th>!N</th>
+        </tr>
+    </table>
+    <script>
+        populateTable(10);
+    </script>
+    
+    <h3>
+        Texto com tamanho da fonte variando entre [1, 7]
+    </h3>
+    <script>
+        for (let i = 1; i <= 7; i++) {
+            document.write('<p><font size='+i+'>font size = '+ i + '</font></p>');
+        }
+    </script>
+
+    <h3>Soma dois números (A+B)</h3>
+
+    <input type="text" id="inputA" placeholder="A"> + <input type="text" id="inputB" placeholder="B">
+    <input type="button" id="buttonSoma" value="Somar" onclick="somaAB()">
+    <p id="resultado"></p>
+    <textarea readonly id="textAreaResultado">Resultado</textarea>
+
+
+</body>
+
+</html>
