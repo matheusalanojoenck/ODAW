@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Exercício 6 ODAW</title>
+</head>
+
+<body>
+    <script>
+        var game;
+
+        function newGame() {
+            game = new GuessGame();
+            game.initGame();
+            game.updateRemainingAttempts();
+        }
+
+    </script>
+    <div id="guessGame">
+        <label id="gameTitle">Adivinhe o número!</label><br />
+        <input type="text" id="playerGuess" disabled="disabled"><br />
+        <input type="submit" id="guessButton" value="Adivinhar" disabled="disabled" onclick="game.playerGuess()">
+        <label id="remainingAttempts"> </label><br />
+        <input type="submit" id="initButton" value="Iniciar" onclick="newGame()"><br />
+        <label id="resultLabel"></label>
+    </div>
+
+    <hr />
+
+    <div id="removeDuplicate">
+        <label id="remvDupLabel">Removedor de Duplicados!</label><br />
+        <input id="inputString" type="text" required>
+        <input type="submit" id="removeDuplicateButton" value="Remover" onclick="remDup()"><br />
+        <label id="resultRemDupLabel"></label>
+    </div>
+
+    <hr />
+
+    <div>
+        <label>Verificador de Senha</label><br />
+        <form>
+            <label id="labelPsw">Senha</label>
+            <input type="password" id="inputPsw" name="psw" pattern="(?=.*\d)(?=.*[A-Z]).{6,}"
+                title="Senha deve conter pelo menos um número, uma letra maiúscula e ter no minimo 8 caracteres!"
+                required="required">
+
+            <input type="submit">
+        </form>
+    </div>
+
+    <hr />
+
+    <div>
+        <label>Ordena Lista!</label><br />
+        <input type="text" id="inputList" placeholder="-3, 4, ... ,1">
+        <input type="submit" id="listButton" onclick="sortList()"><br />
+        <label id="sortResult"></label>
+    </div>
+
+    <hr />
+
+    <label>Exemplo usando javascript!</label><br />
+
+    <p></p>
+
+    <button type="button"
+    onclick="document.getElementById('labelDate').innerHTML = Date()">
+    Data e Hora atual.</button>
+
+    <label id="labelDate"></label>
+
+    <p></p>
+
+    <label>Checar se você é maior de idade!</label><br />
+    <label>Informe sua data de nascimento: </label><input type="date" id="dataNasc">
+    <input type="submit" value="Checar" onclick="maiorIdade()"><br />
+    <label id="resultIdade"></label>
+
+
+
+</body>
+
+</html>
