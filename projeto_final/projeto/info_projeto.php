@@ -1,12 +1,26 @@
 <?php require_once "../connection.php"; ?>
 <?php
+
 $data = "";
-$data_est = "";
+$nome = "";
+$data_inicio = "";
+$data_fim = "";
+$orcamento = "";
+$gerente = "";
+
 if($_GET["num_proj"]){
     $num_proj = $_GET["num_proj"];
     $result = $conexao->query("SELECT * FROM projeto WHERE num_proj = {$num_proj}");
-
     $data = $result->fetch_assoc();
+
+    $result_gerente = $conexao->query("SELECT mat_prof, nome FROM professor WHERE mat_prof={$data['mat_prof']}");
+    $data_gerente = $result_gerente->fetch_assoc();
+
+    $nome = $data["nome"];
+    $data_inicio = $data["data_inicio"];
+    $data_fim = $data["data_fim"];
+    $orcamento = $data["orcamento"];
+    $gerente = $data_gerente["mat_prof"] . " - " . $data_gerente["nome"];
 }
 
 function estudantes()
@@ -39,11 +53,11 @@ function estudantes()
 </head>
 <body>
     <label><a href="../index.php">Voltar</a></label><br>
-    <label>Nome Projeto</label><br>
-    <label>Data Inicio</label><br>
-    <label>Data Fim</label><br>
-    <label>Orçamento</label><br>
-    <label>Gerente</label><br>
+    <label>Nome Projeto: <?php echo $nome?></label><br>
+    <label>Data Inicio: <?php echo $data_inicio?></label><br>
+    <label>Data Fim: <?php echo $data_fim?></label><br>
+    <label>Orçamento: <?php echo $orcamento?></label><br>
+    <label>Gerente: <?php echo $gerente?></label><br>
     <hr>
     <table>
         Estudantes
