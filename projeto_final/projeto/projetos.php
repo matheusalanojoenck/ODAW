@@ -17,7 +17,13 @@ function projetos()
             echo
             "<form method='POST'>" .
                 "<tr>" .
-                "<td>" . $linha["num_proj"] . "<input type='hidden' value='" . $linha["num_proj"] . "' name='num_proj'>" ."</td>" .
+                "<td>" .
+                    "<a href='projeto/info_projeto.php?num_proj=" . $linha["num_proj"] . "'>".
+                    $linha["num_proj"] .
+                    "</a>".
+                    "<input type='hidden' value='" . $linha["num_proj"] . 
+                    "' name='num_proj'>" .
+                 "</td>" .
                 "<td>" . $linha["nome"] . "</td>" .
                 "<td>" . $linha["data_inicio"] . "</td>" .
                 "<td>" . $linha["data_fim"] . "</td>" .
