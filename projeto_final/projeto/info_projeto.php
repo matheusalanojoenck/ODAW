@@ -60,11 +60,16 @@ function estudantes()
 <body>
     <div class="container">
         <label><a href="../index.php">Voltar</a></label><br>
-        <label>Nome Projeto: <?php echo $nome ?></label><br>
-        <label>Data Inicio: <?php echo $data_inicio ?></label><br>
-        <label>Data Fim: <?php echo $data_fim ?></label><br>
-        <label>Orçamento: <?php echo $orcamento ?></label><br>
-        <label>Gerente: <?php echo $gerente ?></label><br>
+        <label>Nome Projeto: </label>
+        <div class="well well-sm"> <?php echo $nome ?> </div><br>
+        <label>Data Inicio: </label>
+        <div class="well well-sm"> <?php echo $data_inicio ?> </div><br>
+        <label>Data Fim: </label>
+        <div class="well well-sm"> <?php echo $data_fim ?> </div><br>
+        <label>Orçamento: </label>
+        <div class="well well-sm"> <?php echo $orcamento ?> </div><br>
+        <label>Gerente: </label>
+        <div class="well well-sm"> <?php echo $gerente ?> </div><br>
         <hr>
         <table class="table">
             <label>Assistentes de Investigação &nbsp;&nbsp;</label>
