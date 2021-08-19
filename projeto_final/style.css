@@ -2,10 +2,12 @@ html{
     background-color: #EAE7FA;
 }
 
-#logo{
+.logo{
     background-color: #A16AE8;
     color: #EAE7FA;
     text-transform: uppercase;
+    text-align: center;
+    text-size-adjust: 100px;
 }
 
 .column-name{

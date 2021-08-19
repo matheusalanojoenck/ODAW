@@ -21,10 +21,11 @@ include "projeto/projetos.php";
 
 <body>
     <div class="container">
-        <br><label id="logo">Gerenciador Universidade</label><br>
+        <div class="logo">
+            <br><label id="logo"><h2>Gerenciador Universidade</h2></label><br>
+        </div>
 
         <hr>
-
 
         <table class="table">
             <label>Projetos&nbsp;</label>
