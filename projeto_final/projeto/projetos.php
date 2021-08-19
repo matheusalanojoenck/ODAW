@@ -29,8 +29,8 @@ function projetos()
                 "<td>" . $linha["data_fim"] . "</td>" .
                 "<td>" . $linha["orcamento"] . "</td>" .
                 "<td>" . $linha["mat_prof"] . "</td>" .
-                "<td>" . "<a href='projeto/edit_projeto.php?num_proj=" . $linha["num_proj"] . "'> <button type='button'>Editar</button>" . "</td>" .
-                "<td>" . "<input type='submit' value='Deletar' name='delete'>" . "</td>" .
+                "<td>" . "<a href='projeto/edit_projeto.php?num_proj=" . $linha["num_proj"] . "'> <button type='button' class='btn btn-primary'>Editar</button>" . "</td>" .
+                "<td>" . "<input type='submit' value='Deletar' name='delete' class='btn btn-danger'>" . "</td>" .
                 "</tr>" .
                 "</form>";
         }

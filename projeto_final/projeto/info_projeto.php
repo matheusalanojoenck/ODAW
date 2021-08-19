@@ -8,7 +8,7 @@ $data_fim = "";
 $orcamento = "";
 $gerente = "";
 
-if($_GET["num_proj"]){
+if ($_GET["num_proj"]) {
     $num_proj = $_GET["num_proj"];
     $result = $conexao->query("SELECT * FROM projeto WHERE num_proj = {$num_proj}");
     $data = $result->fetch_assoc();
@@ -31,12 +31,12 @@ function estudantes()
 
     #$sql_est = "SELECT mat_est FROM assistente_invetigacao WHERE num_proj = {$GLOBALS["data"]['num_proj']}";
     $result_est = $GLOBALS["conexao"]->query($sql_est);
-    
-    while($data_est = $result_est->fetch_assoc()){
-        echo 
-            "<tr>" .
-            "<td>". $data_est["mat_est"] ."</td>" .
-            "<td>". $data_est["nome"] ."</td>" .
+
+    while ($data_est = $result_est->fetch_assoc()) {
+        echo
+        "<tr>" .
+            "<td>" . $data_est["mat_est"] . "</td>" .
+            "<td>" . $data_est["nome"] . "</td>" .
             "</tr>";
     }
 }
@@ -45,31 +45,41 @@ function estudantes()
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Informações Projeto</title>
 </head>
+
 <body>
-    <label><a href="../index.php">Voltar</a></label><br>
-    <label>Nome Projeto: <?php echo $nome?></label><br>
-    <label>Data Inicio: <?php echo $data_inicio?></label><br>
-    <label>Data Fim: <?php echo $data_fim?></label><br>
-    <label>Orçamento: <?php echo $orcamento?></label><br>
-    <label>Gerente: <?php echo $gerente?></label><br>
-    <hr>
-    <table>
-        Estudantes
-        <a href=<?php echo "add_est_projeto.php?num_proj={$data['num_proj']}"?>><button>Adicionar Estudante</button></a>
-        <tr>
-            <td>Matricula</td>
-            <td>Nome</td>
-        </tr>
-        <?php
-           estudantes();
-        ?>
-        
-    </table>
+    <div class="container">
+        <label><a href="../index.php">Voltar</a></label><br>
+        <label>Nome Projeto: <?php echo $nome ?></label><br>
+        <label>Data Inicio: <?php echo $data_inicio ?></label><br>
+        <label>Data Fim: <?php echo $data_fim ?></label><br>
+        <label>Orçamento: <?php echo $orcamento ?></label><br>
+        <label>Gerente: <?php echo $gerente ?></label><br>
+        <hr>
+        <table class="table">
+            <label>Assistentes de Investigação &nbsp;&nbsp;</label>
+            <a href=<?php echo "add_est_projeto.php?num_proj={$data['num_proj']}" ?>><button class="btn btn-success">Adicionar Estudante</button></a>
+            <tr class="column-name">
+                <td>Matricula</td>
+                <td>Nome</td>
+            </tr>
+            <?php
+            estudantes();
+            ?>
+        </table>
+
+    </div>
+
 </body>
+
 </html>

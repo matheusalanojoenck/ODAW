@@ -21,8 +21,8 @@ function departamentos()
                 "<td>" . $linha["nome"] . "</td>" .
                 "<td>" . $linha["escritorio"] . "</td>" .
                 "<td>" . $linha["mat_prof"] . "</td>" .
-                "<td>" . "<a href='departamento/edit_departamento.php?num_dep=" . $linha["num_dep"] . "'> <button type='button'>Editar</button>" . "</td>" .
-                "<td>" . "<input type='submit' value='Deletar' name='delete_dep'>" . "</td>" .
+                "<td>" . "<a href='departamento/edit_departamento.php?num_dep=" . $linha["num_dep"] . "'> <button type='button' class='btn btn-primary'>Editar</button>" . "</td>" .
+                "<td>" . "<input type='submit' value='Deletar' name='delete_dep' class='btn btn-danger'>" . "</td>" .
                 "</tr>" .
                 "</form>";
         }

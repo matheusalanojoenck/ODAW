@@ -20,8 +20,8 @@ function estudantes()
                 "<td>" . $linha["mat_est"] . "<input type='hidden' value='" . $linha["mat_est"] . "' name='mat_est'>" ."</td>" .
                 "<td>" . $linha["nome"] . "</td>" .
                 "<td>" . $linha["num_dep"] . "</td>" .
-                "<td>" . "<a href='estudante_pos/edit_estudante.php?mat_est=" . $linha["mat_est"] . "'> <button type='button'>Editar</button>" . "</td>" .
-                "<td>" . "<input type='submit' value='Deletar' name='delete_est'>" . "</td>" .
+                "<td>" . "<a href='estudante_pos/edit_estudante.php?mat_est=" . $linha["mat_est"] . "'> <button type='button' class='btn btn-primary'>Editar</button>" . "</td>" .
+                "<td>" . "<input type='submit' value='Deletar' name='delete_est' class='btn btn-danger'>" . "</td>" .
                 "</tr>" .
                 "</form>";
         }

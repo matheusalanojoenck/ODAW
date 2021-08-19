@@ -23,12 +23,19 @@ if(isset($_POST["add"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Adicionar Projeto</title>
 </head>
 
 <body>
-    <a href="../index.php">Voltar</a>
+    <div class="container">
+ <a href="../index.php">Voltar</a>
     <form method="POST">
+        <label>Adicionar Projeto</label>
+        <hr>
         <label>Nome</label><br>
         <input name="input_nome" required><br>
 
@@ -44,8 +51,10 @@ if(isset($_POST["add"])){
         <label>Gerente</label><br>
         <input name="input_gerente"><br>
 
-        <input type="submit" name="add" value="Adicionar"> 
+        <input type="submit" name="add" value="Adicionar" class="btn btn-success"> 
     </form>
+    </div>
+   
 </body>
 
 </html>

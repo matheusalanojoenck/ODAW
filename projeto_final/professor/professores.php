@@ -21,8 +21,8 @@ function professores()
                 "<td>" . $linha["nome"] . "</td>" .
                 "<td>" . $linha["sala"] . "</td>" .
                 "<td>" . $linha["especialidade"] . "</td>" .
-                "<td>" . "<a href='professor/edit_professor.php?mat_prof=" . $linha["mat_prof"] . "'> <button type='button'>Editar</button>" . "</td>" .
-                "<td>" . "<input type='submit' value='Deletar' name='delete_prof'>" . "</td>" .
+                "<td>" . "<a href='professor/edit_professor.php?mat_prof=" . $linha["mat_prof"] . "'> <button type='button' class='btn btn-primary'>Editar</button>" . "</td>" .
+                "<td>" . "<input type='submit' value='Deletar' name='delete_prof' class='btn btn-danger'>" . "</td>" .
                 "</tr>" .
                 "</form>";
         }
