@@ -1,0 +1,19 @@
+html{
+    background-color: #EAE7FA;
+}
+
+#logo{
+    background-color: #A16AE8;
+    color: #EAE7FA;
+    text-transform: uppercase;
+}
+
+.column-name{
+    color: #EAE7FA;
+    font-weight: bold;
+    background-color: #A16AE8;
+}
+
+td {
+    padding: 5px;
+}
